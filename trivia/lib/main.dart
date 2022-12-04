@@ -3,7 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:trivia/routes.dart';
 import 'package:trivia/theme.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(App());
 }
@@ -32,9 +32,9 @@ class _AppState extends State<App> {
       future: _initialization,
       builder: (context, snapshot) {
         // Check for errors
-        if (snapshot.hasError) {
-          return Text('error', textDirection: TextDirection.ltr);
-        }
+        // if (snapshot.hasError) {
+        //   return Text('error', textDirection: TextDirection.ltr);
+        // }
 
         // Once complete, show your application
         if (snapshot.connectionState == ConnectionState.done) {
