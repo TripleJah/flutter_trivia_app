@@ -8,7 +8,7 @@ import 'package:trivia/home/home.dart';
 
 
 var appRoutes = {
-  '/': (context) => const HomeScreen(),
+  '/': (context) => const Homescreen(),
   '/login': (context) => const LoginScreen(),
   '/topics': (context) => const TopicsScreen(),
   '/profile': (context) => const ProfileScreen(),

@@ -5,6 +5,7 @@ import 'package:trivia/theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(App());
 }
 
@@ -43,6 +44,8 @@ class _AppState extends State<App> {
             theme: appTheme,
           );
         }
+
+        
 // Otherwise, show something whilst waiting for initialization to complete
         return Text('loading', textDirection: TextDirection.ltr);
       },
