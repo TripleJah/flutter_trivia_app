@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ErrorMessage extends StatelessWidget {
-  const ErrorMessage({ Key? key }) : super(key: key);
+  final String message;
+
+  const ErrorMessage({super.key, this.message = 'it broke'});
 
   @override
   Widget build(BuildContext context) {
-    return 
-      const Center(
-        child: Text('error'),
-      );
+    return Center(
+      child: Text(message),
+    );
   }
 }

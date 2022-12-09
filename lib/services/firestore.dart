@@ -11,7 +11,7 @@ class FirestoreService {
   Future<List<Topic>> getTopics() async {
     var ref = _db.collection('topics');
     var snapshot = await ref.get();
-    var data = snapshot.docs.map((s) => s.data);
+    var data = snapshot.docs.map((s) => s.data());
     var topics = data.map((d) => Topic.fromJson(d));
     return topics.toList();
   }
@@ -39,7 +39,7 @@ class FirestoreService {
   //Updates current user report doc post quiz completion
   Future<void> updateUserReport(Quiz quiz) {
     var user = AuthService().user!;
-    var ref = _db.collection('reports').doc(user.id);
+    var ref = _db.collection('reports').doc(user.uid);
 
     var data = {
       'total': FieldValue.increment(1),

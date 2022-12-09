@@ -5,7 +5,6 @@ import 'package:trivia/shared/bottom_nav.dart';
 import 'package:trivia/topics/topics.dart';
 import 'package:trivia/services/auth.dart';
 import 'package:trivia/Loading/loading.dart';
-import 'package:trivia/error/error.dart';
 
 class Homescreen extends StatelessWidget {
   const Homescreen({super.key});
