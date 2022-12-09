@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trivia/Loading/loading.dart';
+import 'package:trivia/shared/loading.dart';
 import 'package:trivia/services/firestore.dart';
 import 'package:trivia/services/models.dart';
 import 'package:trivia/shared/bottom_nav.dart';
